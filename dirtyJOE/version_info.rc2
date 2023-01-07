@@ -1,0 +1,40 @@
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+#include "ui/version_info.h"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION DJ_VERSION_0,DJ_VERSION_1,DJ_VERSION_2,DJ_VERSION_3
+ PRODUCTVERSION DJ_VERSION_0,DJ_VERSION_1,DJ_VERSION_2,DJ_VERSION_3
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041504b0"
+        BEGIN
+            VALUE "Comments", "Viewer and Editor for compiled .class files"
+            VALUE "CompanyName", "ReWolf"
+            VALUE "FileDescription", "dirtyJOE - Java Overall Editor"
+            VALUE "FileVersion", DJ_VERSION_LONG
+            VALUE "InternalName", "dirtyJOE"
+            VALUE "LegalCopyright", "Copyright (C) 2008 - 2017, ReWolf"
+            VALUE "OriginalFilename", "dirtyJOE.exe"
+            VALUE "ProductName", "dirtyJOE Application"
+            VALUE "ProductVersion", DJ_VERSION_LONG
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x415, 1200
+    END
+END

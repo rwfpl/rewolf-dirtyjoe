@@ -1,0 +1,5 @@
+[plugininstall]
+description=Java Overall Editor - binary editor for compiled .class files
+type=wlx
+file=TotalJOE.wlx
+defaultdir=plugins\wlx\TotalJOE

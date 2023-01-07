@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Tips & Tricks</title>
+<meta http-equiv="content-type" content="text/html" />
+</head>
+
+<body style="font-family: Arial; font-size: 12pt;">
+<Object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="Keyword" value="code editor">
+	<param name="Keyword" value="hex paste">
+	<param name="Keyword" value="opening .class file">
+	<param name="Keyword" value="tips">
+	<param name="Keyword" value="tricks">
+	<param name="Keyword" value="opcodes help">
+    <param name="Keyword" value="recent files">
+</OBJECT>
+<hr />
+<div><div align=center><table width=800 border=0 cellpadding=1 cellspacing=2 style="border-width: 0px;">
+<tr valign=top>
+    <td style="text-align: justify;">
+    <h2>Opening .class files</h2>
+        <p>You can open .class file directly from command line:<br><br>
+        <code>dirtyjoe.exe somefile.class</code><br /><br />
+        or you can also use drag'n'drop feature.</p>
+
+    <hr />
+    <h2>Shell extension</h2>
+        <p>You can register shell extension for .class files using <b><i>Options->Register shell extension</i></b></p>
+        <p align="center"><img src="screens/shellext.png"></p>
+        <p>To unregister shell extension, you have to use <b><i>Options->Unregister shell extension</i></b></p>
+
+    <hr />
+    <h2>Updating dirtyJOE</h2>
+        <p>You can use <i><b>Help->Check for Updates</b></i> option to check if there is a newer version of dirtyJOE. 
+        If there will be a new version, You will be asked if you want to update and in case of positive answer Your default 
+        web browser will start downloading archive with new version.</p>
+
+    <hr />
+    <h2>Pasting hex values to Code Editor</h2>
+        <p>You can paste hex values with any garbage characters to <B><I>Code Editor</I></B>, all non-hex characters will be skipped. 
+        You can also paste hex values with <B>0x </B>prefix, for example:<br><br>
+        <code>{0x12, 0x23, 0x65, 0xff, 0x99};</code><br><br>
+        above code will be pasted as:<br><br>
+        <code>12 23 65 FF 99</code>
+        </p>
+
+    <hr />
+    <h2>Opcodes Help</h2>
+        <p><b>dirtyJOE</b> contains embedded description of all opcodes from the <b>Java</b> bytecode. It can be viewed from <i><b>Help -> Opcodes Help</b></i> menu. 
+        It can be also launched as a separate process thorugh <b>/opcodes</b> command line switch. <b></b>Opcodes Help</b> window can be sticked to application main
+        window or to <b>Code Editor</b> window.</p>
+        <p align="center"><img src="screens/opcodes_help.png"></p>
+
+    <hr />
+    <h2>Recent files</h2>
+        <p>You can access up to 10 recently used files from <i><b>File->Recent files</b></i> menu:</p>
+        <p align="center"><img src="screens/menu_recent.png"></p>
+    </td>
+</tr>
+</table>
+</div></div>
+<br />
+<hr />
+<small><center>(C) 2008-2014, ReWolf</center></small>
+</body>
+</html>

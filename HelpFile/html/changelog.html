@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Changelog</title>
+<meta http-equiv="content-type" content="text/html">
+</head>
+
+<body style="font-family: Arial; font-size: 12pt;">
+<Object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="Keyword" value="changelog">
+</OBJECT>
+<hr>
+<div><div align=center><table width=800 border=0 cellpadding=1 cellspacing=2 style="border-width: 0px;">
+<tr valign=top>
+<td style="text-align: justify;">
+
+<p><b><u>2014-12-21 v1.7 (c529):</u></b></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+    <li><b>Java 8</b> support:</li>
+    <ul>
+        <li>Added support for new constant pool types:</li>
+        <ul>
+            <li>CONSTANT_MethodHandle</li>
+            <li>CONSTANT_MethodType</li>
+            <li>CONSTANT_InvokeDynamic</li>
+        </ul>
+        <li>Added viewer for <i>BootstrapMethod</i> attribute</li>
+        <li>Added support for <i>invokedynamic</i> opcode</li>
+    </ul>
+    <li>Added viewer for <i>StackMap</i> attribute</li>
+    <li>Added <i>Copy</i> and <i>Copy all</i> to the exception table list in <b>Code Editor</b></li>
+    <li>Added <i>/opcodes</i> command line switch to start <b>Opcodes Help</b> only</li>
+    <li>Added demangling of <i>Signature</i> attribute</li>
+    <li><b>Opcodes Help</b> window can now be stuck to the main application window or to <b>Code Editor</b> window</li>
+    <li>Added some more keyboard shortcuts</li>
+</ul>
+<hr />
+<p><b><u>2013-11-28 v1.6 (c472):</u></b></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+    <li>Added <b>Restore Debug Info</b> feature (GUI and command line support)</li>
+    <li>Added viewer and editor for <b>LocalVariableTable</b> attribute</li>
+    <li>Added viewer for <b>LineNumberTable</b> attribute</li>
+    <li>Added modification indicator (asks for save before exit)</li>
+    <li>Added list of recently opened files in <i>File</i> menu</li>
+    <li>Most of <i>small</i> windows can be closed with <b>ESC</b> key</li>
+    <li>Added search possibility to the generic viewer window</li>
+    <li><b>Methods/Fields tab</b> changes:</li>
+    <ul>
+        <li>Double click on the <b>Methods/Fields</b> list now launches editor for the default attribute (e.g. Code Editor)</li>
+        <li>Double click on the preview panel now launches editor for the default attribute</li>
+    </ul>
+    <li><b>Constant Pool tab</b> changes:</li>
+    <ul>
+        <li>Added ability to set decimal/hexadecimal index on the list</li>
+        <li>Added ability to set case sensitiveness for <i>Active search</i></li>
+    </ul>
+    <li><b>Code Editor</b> changes:</li>
+    <ul>
+        <li>Added support for keyboard shortcuts</li>
+        <li>Added search possibility</li>
+	    <li>Added <i>Edit opcode</i> action to the context menu</li>
+	    <li>Added <i>Add exception handler</i> for selected region to the context menu</li>
+	    <li>Name of the current function visible in the window title</li>
+	    <li>Remember hex/addr/disasm settings for <i>Copy selection</i> action</li>
+    </ul>
+    <li><b>Bugfixes:</b></li>
+    <ul>
+        <li>Fixed <b>Register Shell Extension</b> action</li>
+        <li>Fixed possible hang on startup update check</li>
+        <li>Save file automatically adds .class extension if extension was not specified</li>
+        <li>Fixed problem with displaying long strings on <b>Constant Pool tab</b></li>
+        <li>Fixed problem with Python support in TotalCmd plugin</li>
+    </ul>
+</ul>
+<hr />
+<p><b><u>2011-09-21 v1.5 (c359):</u></b></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+    <li>Added internal <b>Opcodes Help</b> with description of all Java bytecode opcodes</li>
+    <li>Added active help in <b>Code Editor</b> window, that prints short description of selected opcode</li>
+    <li>Improved Python scripting</li>
+    <ul>
+        <li>Added decrypter for <b>Allatori</b> obcfuscator</li>
+        <li>Added possibility to re-encrypt decrypted strings</li>
+    </ul>
+    <li>Added active search filter for <b>Constant Pool</b> tab</li>
+    <li>Added possibility to copy content from some more windows</li>
+    <li>Added <b>Donation</b> feature to <b>Help</b> menu and to <b>About</b> dialog</li>
+</ul>
+<hr />
+<p><b><u>2011-07-06 v1.4 (c334):</u></b></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+    <li>BugFix: Fixed problem with changing fonts on Windows XP.</li>
+</ul>
+<hr />
+<p><b><u>2011-06-07 v1.4 (c326):</u></b></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+    <li>BugFix: Removed <i>'missing python dll'</i> messageboxes at startup.</li>
+</ul>
+<hr />
+<p><b><u>2011-06-04 v1.4 (c324):</u></b></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+    <li><b>Utf8</b> and <b>String</b> objects can be modified by 
+        custom <b><a href="python_scripting.html">Python scripts</b></a> (<i>supported version 2.5, 2.6, 2.7 both 
+        x86 and x64</i>)</li>
+    <li>Added <b>drag&#39;n&#39;drop</b> support</li>
+    <li>Added possibility to copy dissasembly to clipboard</li>
+    <li>Added possibility to change font in dissasembly window</li>
+    <li>Added update check on startup (can be turned off)</li>
+</ul>
+<hr />
+<p><b><u>2011-01-10 v1.3 (c263):</u></b></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li>Total Commander plugin as a separate download (functionality is the same as in stand-alone 1.3 (c255))</li>
+</ul>
+<hr />
+<p><b><u>2011-01-06 v1.3 (c255):</u></b></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li>Added support for editing <b><i>Name</i></b>, <b><i>Descriptor</i></b> and <b><i>Flags</i></b> on <b>Methods</b> and <b>Fields</b> tab</li>
+<li>Added <b><i>Add</b></i> and <b><i>Delete</b></i> actions for <b>Methods</b> and <b>Fields</b></li>
+<li>Added <b><i>Add</b></i>, <b><i>View</b></i>, <b><i>Edit</b></i> and <b><i>Delete</b></i> actions for attributes on <b>Methods</b> and <b>Fields</b> tab and in <b>Code Editor</b></li>
+<li>Added support for editing <b><i>Max Stack</b></i> and <b><i>Max Locals</b></i> fields in <b>Code Editor</b></li>
+<li>Added support for adding <b><i>Code</b></i> and <b><i>Exceptions</b></i> attributes</li>
+<li>Added support for editing <i><b>exception records</b></i> in <b>Code Editor</b></li>
+<li><b>Code Editor</b> window merged with <b>Code Viewer</b></li>
+<li>GUI ported to WTL (Windows Template Library)</li>
+</ul>
+<hr />
+<p><b><u>2010-10-31 v1.2 (c213):</u></b></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li>Added context menu for <b>Interfaces</b> field (<b><i>Implements</i></b> listbox on <b><i>Overview</i></b> tab). 
+    Specific interfaces can be now <i>Added, Edited</i> or <i>Deleteed</i>.</li>
+<li>Added context menu for <b>Attributes</b> listbox on <b><I>Overview</I></b> tab. 
+    Specific attributes can be now <I>Edited, Viewed, Added  </I>or <I>Deleteed</I>. Currently supported attributes: <I>InnerClasses, Synthetic, Deprecated, ConstantValue, Signature, SourceFile, EnclosingMethod</I></li>
+<li>Added <I><B>Edit with dirtyJOE </B></I>feature to shell context menu of .class files</li>
+<li>Added simple <B><I>Check for Updates </I></B>mechanism</li>
+<li>Name of opened file is visible on window title</li>
+<li>Native x64 executable as a separate download</li>
+</ul>
+<hr />
+<p><b><u>2010-09-26 v1.1 (c169):</u></b></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li>Added <b>Edit</b> option for <i>Minor version</i>, <i>Major version</i>, <i>Access flags</i>, <i>This class</i> and <i>Super class</i> fields on <b><I>Overview</I></b> tab.</li>
+<li>Added <b>Show Refs</b> button on <b><I>Constant Pool</I></b> tab.</li>
+<li>Added <b>Object filter</b> on <b><I>Constant Pool</I></b> tab.</li>
+<li>Added context menu on <b><I>Constant Pool</I></b> tab with some common operations: <i>Copy Text</i>, <i>Edit Item</i>, <i>Add Item</i> and <i>Show References</i></li>
+</ul>
+<hr />
+<p><u><b>2010-09-18 v1.0 (c147):</u></b></p>
+<ul style="text-indent: 0px; margin-left: 24px; list-style-position: outside;">
+<li>Initial release</li>
+</ul>
+
+</td>
+</tr>
+</table>
+</div></div>
+<br>
+<hr>
+<small><center>(C) 2008-2014, ReWolf</center></small>
+</body>
+</html>

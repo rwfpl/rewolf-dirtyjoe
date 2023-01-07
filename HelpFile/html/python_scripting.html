@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Python scripting</title>
+<meta http-equiv="content-type" content="text/html">
+    <style type="text/css">
+        .style1
+        {
+            background-color: #66FF66;
+        }
+    </style>
+</head>
+
+<body style="font-family: Arial; font-size: 12pt;">
+<Object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="Keyword" value="python">
+	<param name="Keyword" value="python scripting">
+	<param name="Keyword" value="pyjoe">
+	<param name="Keyword" value="dj_normalizeUtf8">
+	<param name="Keyword" value="dj_encodeUtf8">
+	<param name="Keyword" value="dj_decryptUTF8_ZKM">
+	<param name="Keyword" value="dj_decryptUTF8_Allatori">
+</OBJECT>
+<hr>
+<div><div align=center><table width=800 border=0 cellpadding=1 cellspacing=2 style="border-width: 0px;">
+<tr valign=top>
+<td style="text-align: justify;">
+<p>
+Python scripting in <b><i>dirtyJOE</i></b> can be used to modify <i><b>CONSTANT_Utf8</b></i> objects from <i>Constant Pool</i>.
+One of the main use is decryption of <i><b>CONSTANT_Utf8</b></i> objects in <i>obfuscated</i> .class files. Decrypted objects are
+useful in forensic analysis, they can be also used to translate obfuscated java application.
+</p>
+<h3>PyJOE library</h3>
+<p>
+In <i>\scripts\</i> directory you can find <b>pyjoe.py</b> file which contains few useful functions that can be used by other scripts:<br /><br />
+<hr>
+<pre>
+def dj_normalizeUtf8(inBuffer):
+</pre>
+Function responsible for translating the Java Utf8 input buffer (tuple) to list of integer that represents each character.
+<hr>
+<pre>
+def dj_encodeUtf8(inBuffer):
+</pre>
+Function responsible for translating list of integers that represent each characters to the Java Utf8 buffer (list).
+</p>
+<hr>
+<pre>
+def dj_decryptUTF8_ZKM(inBuffer, key):
+</pre>
+Standard decrypter for strings encoded by <b><i>Zelix KlassMaster</i></b> obfuscator, it can be also used to re-encrypt strings (very useful for translation of obfuscated Java applications). Usage example can be found in <i>\scripts\zkm_decrypt.py</i> file.
+</p>
+<hr>
+<pre>
+def dj_decryptUTF8_Allatori(inBuffer, key):
+</pre>
+Standard decrypter for strings encoded by <b><i>Allatori</i></b> obfuscator, it can be also used to re-encrypt strings (very useful for translation of obfuscated Java applications). Usage example can be found in <i>\scripts\allatori_decrypt.py</i> file.
+</p>
+<hr>
+<h3>Example</h3>
+<p>
+I'll show how to use python scripting on sample obfuscated java malware called <i>Boonana</i>. Mentioned malware appeared
+in october 2010 and was obfuscated with <b><i>Zelix KlassMaster</i></b> 5.3.3E (according to entry in constant pool "ZKM5.3.3E").
+</p>
+<p>Script should contain only one simple function that will be called by <b><i>dirtyJOE</i></b> on each encrypted <b>Utf8</b> object:</p>
+<pre>
+def dj_decryptUTF8(inBuf):
+    return []
+</pre>
+<p>
+<i>inBuf</i> - input buffer, it is <b>tuple</b>, where each byte of <b>Utf8</b> string is represented as <b>integer</b> value<br />
+<i>return</i> - output buffer should be a <b>list</b>, where each byte of <b>Utf8</b> string is represented as <b>integer</b> value
+</p>
+<p>
+Universal script for decrypting <b>Utf8</b> objects encrypted by <i><b>Zelix KlassMaster</b></i> obfuscator can be found in \scripts\ 
+directory. It is very simple, all what is needed is to find proper <i><b>'key'</b></i> value:
+</p>
+<pre>
+def dj_decryptUTF8_ZKM(inBuffer, key):
+	i = 0
+	ik = 0
+	ret = []
+	last = len(inBuffer)
+	while i < last:
+		c = inBuffer[i]
+		if c == 0:
+			break
+		defAdd = 1
+		if (c >> 5) == 6:
+			c = ((c & 0x1f) << 6) + (inBuffer[i+1] & 0x3f)
+			defAdd = 2
+		elif (c >> 4) == 0xE:
+			c = ((c & 0xf) << 12) + ((inBuffer[i+1] & 0x3f) << 6) \
+			+ (inBuffer[i+2] & 0x3f)
+			defAdd = 3
+
+		ret += [c ^ key[ik % 5]]
+		i += defAdd
+		ik += 1
+	return ret
+
+# 'instr' argument is input buffer represented as tuple
+# function should return list object
+def dj_decryptUTF8(inBuf):
+	key = [48, 16, 127, 16, 97]
+	return dj_decryptUTF8_ZKM(inBuf, key)
+</pre>
+<p>
+<b><i>'key' </i></b>value is very easy to find, all references to the encrypted object have to be checked, following those
+references will reveal function that is responsible for decryption. For example:<br />
+<ul>
+	<li>Lets get first encrypted <b><i>CONSTANT_Utf8</i></b> object from <b>Constant Pool,</b> it is object number <i>147</i></li>
+    <li>Check references to this object be selecting '<i>Show References</i>' option from the context menu</li>
+    <li>References window shows that object <i>147</i> is referenced only once by <i>'Constant Pool: 13'</i></li>
+    <li>Check references to object <i>13</i> (it is <b><i>CONSTANT_String</i></b> object)</li>
+    <li>References window shows that object <i>13</i> is referenced only once by <i>'Method: &lt;clinit&gt;, attribute: Code, bytecode@00000089'</i></li>
+</ul>
+Checking this method at given position reveals this code:
+<pre>
+00000086 : dup
+00000087 : bipush              15
+00000089 : ldc                 "Xd `[?gxdB~dOS"
+0000008B : jsr                 pos.000000B0
+0000008E : aastore
+</pre>
+<b>jsr</b> opcode is acronym for <i>'jump subroutine'</i>, and subroutine at <i>pos.000000B0</i> looks like this:
+<pre>
+000000B0 : astore_0
+000000B1 : invokevirtual       char[] java.lang.String.toCharArray()
+000000B4 : dup
+000000B5 : arraylength
+000000B6 : swap
+000000B7 : iconst_0
+000000B8 : istore_1
+000000B9 : swap
+000000BA : dup_x1
+000000BB : iconst_1
+000000BC : if_icmpgt           pos.0000010A
+000000BF : dup
+000000C0 : iload_1
+000000C1 : dup2
+000000C2 : caload
+000000C3 : iload_1
+000000C4 : iconst_5
+000000C5 : irem
+<span class="style1">000000C6 : tableswitch         l: 0, h: 3, def: pos.000000F8,</span>
+<span class="style1">                               pos.(000000E4, 000000E9, 000000EE, 000000F3)</span>
+<span class="style1">000000E4 : bipush              48</span>
+<span class="style1">000000E6 : goto                pos.000000FA</span>
+<span class="style1">000000E9 : bipush              16</span>
+<span class="style1">000000EB : goto                pos.000000FA</span>
+<span class="style1">000000EE : bipush              127</span>
+<span class="style1">000000F0 : goto                pos.000000FA</span>
+<span class="style1">000000F3 : bipush              16</span>
+<span class="style1">000000F5 : goto                pos.000000FA</span>
+<span class="style1">000000F8 : bipush              97</span>
+<span class="style1">000000FA : ixor</span>
+000000FB : i2c
+000000FC : castore
+000000FD : iinc                local.01, 1
+00000100 : swap
+00000101 : dup_x1
+00000102 : ifne                pos.0000010A
+00000105 : dup2
+00000106 : swap
+00000107 : goto                pos.000000C1
+0000010A : swap
+0000010B : dup_x1
+0000010C : iload_1
+0000010D : if_icmpgt           pos.000000BF
+00000110 : new                 java.lang.String
+00000113 : dup_x1
+00000114 : swap
+00000115 : invokespecial       void java.lang.String.<init>(char[])
+00000118 : invokevirtual       java.lang.String java.lang.String.intern()
+0000011B : swap
+0000011C : pop
+0000011D : ret                 local.00
+</pre>
+As it may be noticed, the green part of this subroutine contains key for decryption routine: <i>48, 16, 127, 16, 97</i>.
+At this point, script can be tested in <b><i>dirtyJOE</i></b> by selecting &#39;<i><b>Run Python Script</b></i>&#39; 
+option from the <i>Constant Pool</i> context menu:
+</p>
+<p align="center"><img src="screens/py_single_dcr.png"></p>
+<p>
+<i><b>'Decrypt</b></i>' button is used strictly for script testing purposes, it will show string after decryption in '<i><b>Preview</b></i>'
+field. After clicking '<i><b>Save</b></i>' button, object will be decrypted again, and user will be prompted by below message box:
+</p>
+<p align="center"><img src="screens/py_single_confirm.png"></p>
+<p>
+When script is finished it can be run on all encrypted <b>Utf8</b> objects (by choosing '<b>Run Python Script on All Utf8 Objects</b>'
+option from the <i>Constant Pool</i> context menu):
+</p>
+<p align="center"><img src="screens/py_multi_dcr.png"></p>
+<p>
+<b><i>'Decrypt</i></b>' button has similar function as in previous window. After clicking '<i><b>Save</b></i>' button user will be
+prompted to accept all changes:
+</p>
+<p align="center"><img src="screens/py_multi_dcr_preview.png"></p>
+<p>
+That's pretty much all.
+</p>
+</td>
+</tr>
+</table>
+</div></div>
+<br>
+<hr>
+<small><center>(C) 2008-2014, ReWolf</center></small>
+</body>
+</html>

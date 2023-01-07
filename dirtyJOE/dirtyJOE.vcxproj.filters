@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{19858705-42a0-447b-bb1b-6e1038c30652}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{3b039538-e9ae-4014-8be0-f53404555d7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="java_support">
+      <UniqueIdentifier>{6a6c0e74-a6af-494d-9e4e-4646188097c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Dialogs">
+      <UniqueIdentifier>{72358f4e-83dc-47c1-b1a4-4842a97e79ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="java_support\ConstantPool">
+      <UniqueIdentifier>{10186e6f-0805-4815-a31e-ea91109e4e5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="java_support\Attributes">
+      <UniqueIdentifier>{bb94b123-df8c-4a22-b81b-68d54d108ea6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="java_support\JDisasm">
+      <UniqueIdentifier>{2eab1a3b-4bc8-4255-a3e9-1d41c4bbe425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party">
+      <UniqueIdentifier>{573dbc87-906d-423f-98ec-f8b469153ba9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third_party\aplib">
+      <UniqueIdentifier>{e65f4607-861c-4b29-9621-d79b769d87af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="java_support\Attributes\StackMapTable">
+      <UniqueIdentifier>{74d45bb3-25dd-4b16-a62f-4cac40b5762c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="java_support\JDisasm\Opcodes">
+      <UniqueIdentifier>{7e823035-82a7-4ad9-97d3-64dd1fe51d8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="java_support\JDisasm\Legacy">
+      <UniqueIdentifier>{0ae61aed-d6cf-4b97-9dc3-78fbf58d88ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="java_support\JDisasm\Helpers">
+      <UniqueIdentifier>{5267bf76-6909-4d6f-a15d-51f19b402cd5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\ui_helpers.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\CClassFile.cpp">
+      <Filter>java_support</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\exception_entry.cpp">
+      <Filter>java_support</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\field_info.cpp">
+      <Filter>java_support</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\helpers.cpp">
+      <Filter>java_support</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\hlp_references.cpp">
+      <Filter>java_support</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\shellext.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\attributesWnd.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\CDJSettings.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="common\PyJOEWrapper.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgAbout.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgAddAttribute.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgAddCPItem.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgCode.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgCodeEditor.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgEditAttrConstantValue.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgEditAttrExceptions.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgEditException.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgEditFlags.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgEditInnerClasses.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgEditRef.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgEditUtf8.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgEditUx.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgEditVal.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgMain.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgMiniHexEdit.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgPythonMultiDecrypter.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgPythonMultiPreview.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgPythonStringDecrypt.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgSettings.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgSimpleEditDec.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgSimpleLBView.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgTabConstantPool.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgTabFM.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgTabOverview.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgTabSubFM.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\CONSTANT_Utf8_info.cpp">
+      <Filter>java_support\ConstantPool</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\attribute_info.cpp">
+      <Filter>java_support\Attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\CAttrCode.cpp">
+      <Filter>java_support\Attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\CAttrUnknown.cpp">
+      <Filter>java_support\Attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\inner_class.cpp">
+      <Filter>java_support\Attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\line_number_tab.cpp">
+      <Filter>java_support\Attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\local_vars.cpp">
+      <Filter>java_support\Attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\stack_map_frame_cldc.cpp">
+      <Filter>java_support\Attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgSelectColumn.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="third_party\aplib\depacks.c">
+      <Filter>third_party\aplib</Filter>
+    </ClCompile>
+    <ClCompile Include="common\JVMSpec.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\AppDir.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgOpcodesHelp.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\RestoreDebugInfo.cpp">
+      <Filter>java_support</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgEditLocalVariableTable.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\dlgRestoreDebugInfo.cpp">
+      <Filter>UI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\append_frame.cpp">
+      <Filter>java_support\Attributes\StackMapTable</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\full_frame.cpp">
+      <Filter>java_support\Attributes\StackMapTable</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\same_locals_1_stack_item_frame.cpp">
+      <Filter>java_support\Attributes\StackMapTable</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\same_locals_1_stack_item_frame_extended.cpp">
+      <Filter>java_support\Attributes\StackMapTable</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\stack_map_frame.cpp">
+      <Filter>java_support\Attributes\StackMapTable</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\bootstrap_methods.cpp">
+      <Filter>java_support\Attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\StickyWindow.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\jdisasm\JvmOpAtype.cpp">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\jdisasm\JvmOpByteLocal.cpp">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\jdisasm\JvmOpFlow.cpp">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\jdisasm\JvmOpInt.cpp">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\jdisasm\JvmOpLookupSwitch.cpp">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\jdisasm\JvmOpOneByte.cpp">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\jdisasm\JvmOpTableSwitch.cpp">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\jdisasm\JvmOpWordCP.cpp">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\jdisasm\jdisasm.cpp">
+      <Filter>java_support\JDisasm\Legacy</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\jdisasm\JvmFunction.cpp">
+      <Filter>java_support\JDisasm\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\jdisasm\JvmBasicBlock.cpp">
+      <Filter>java_support\JDisasm\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="java_support\jdisasm\JvmOpcodeFactory.cpp">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="gfx\dirtyjoe.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="gfx\logo_dlg.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="version_info.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="gfx\donate5.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="dirtyJOE.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="UI\CDirtyJOE.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\resource.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\ui_helpers.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\version_info.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CDefClass.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CDynamicStruct.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CLogConsole.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CLogDummy.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CLogger.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\common.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\common_macros.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\CClassFile.h">
+      <Filter>java_support</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\CDynamicStructWithCP.h">
+      <Filter>java_support</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\exception_entry.h">
+      <Filter>java_support</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\field_info.h">
+      <Filter>java_support</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\helpers.h">
+      <Filter>java_support</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\helpers_templates.h">
+      <Filter>java_support</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\hlp_references.h">
+      <Filter>java_support</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\java_class_def.h">
+      <Filter>java_support</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\java_types.h">
+      <Filter>java_support</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\uX_dynStruct.h">
+      <Filter>java_support</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\uXuX_dynStruct.h">
+      <Filter>java_support</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\shellext.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\pre_wtl.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\attributesWnd.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\CDJSettings.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="common\PyJOEWrapper.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\common_templates.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgTabSubFM.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgAbout.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgAddAttribute.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgAddCPItem.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgCode.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgCodeEditor.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgEditAttrConstantValue.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgEditAttrExceptions.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgEditException.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgEditFlags.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgEditInnerClasses.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgEditRef.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgEditUtf8.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgEditUx.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgEditVal.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgMain.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgMiniHexEdit.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgPythonMultiDecrypter.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgPythonMultiPreview.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgPythonStringDecrypt.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgSettings.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgSimpleEditDec.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgSimpleLBView.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgTabConstantPool.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgTabFM.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgTabOverview.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\CONSTANT_uXuX_info.h">
+      <Filter>java_support\ConstantPool</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\CONSTANT_Utf8_info.h">
+      <Filter>java_support\ConstantPool</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\CONSTANT_uX_info.h">
+      <Filter>java_support\ConstantPool</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\cp_info.h">
+      <Filter>java_support\ConstantPool</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\JavaConstPool_type.h">
+      <Filter>java_support\ConstantPool</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\attribute_info.h">
+      <Filter>java_support\Attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\CAttrUxUxTemplate.h">
+      <Filter>java_support\Attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\CAttrCode.h">
+      <Filter>java_support\Attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\CAttrTableTemplate.h">
+      <Filter>java_support\Attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\CAttrUnknown.h">
+      <Filter>java_support\Attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\CAttrUxTemplate.h">
+      <Filter>java_support\Attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\inner_class.h">
+      <Filter>java_support\Attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\line_number_tab.h">
+      <Filter>java_support\Attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\local_vars.h">
+      <Filter>java_support\Attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\stack_map_frame_cldc.h">
+      <Filter>java_support\Attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgSelectColumn.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="third_party\aplib\depacks.h">
+      <Filter>third_party\aplib</Filter>
+    </ClInclude>
+    <ClInclude Include="common\JVMSpec.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\AppDir.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgOpcodesHelp.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\RestoreDebugInfo.h">
+      <Filter>java_support</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgEditLocalVariableTable.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\dlgRestoreDebugInfo.h">
+      <Filter>UI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CListBoxLogger.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\append_frame.h">
+      <Filter>java_support\Attributes\StackMapTable</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\full_frame.h">
+      <Filter>java_support\Attributes\StackMapTable</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\same_locals_1_stack_item_frame.h">
+      <Filter>java_support\Attributes\StackMapTable</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\same_locals_1_stack_item_frame_extended.h">
+      <Filter>java_support\Attributes\StackMapTable</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\stack_map_frame.h">
+      <Filter>java_support\Attributes\StackMapTable</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\bootstrap_methods.h">
+      <Filter>java_support\Attributes</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\StickyWindow.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="PyJOE\pyjoe.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\jdisasm\JvmOpAtype.h">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\jdisasm\JvmOpByteLocal.h">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\jdisasm\JvmOpcode.h">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\jdisasm\JvmOpFlow.h">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\jdisasm\JvmOpInt.h">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\jdisasm\JvmOpLookupSwitch.h">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\jdisasm\JvmOpOneByte.h">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\jdisasm\JvmOpTableSwitch.h">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\jdisasm\JvmOpWordCP.h">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\jdisasm\jdisasm.h">
+      <Filter>java_support\JDisasm\Legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\jdisasm\JvmFunction.h">
+      <Filter>java_support\JDisasm\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\jdisasm\JvmBasicBlock.h">
+      <Filter>java_support\JDisasm\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\jdisasm\JvmOpcodeFactory.h">
+      <Filter>java_support\JDisasm\Opcodes</Filter>
+    </ClInclude>
+    <ClInclude Include="java_support\jdisasm\jdisasm_enums.h">
+      <Filter>java_support\JDisasm\Legacy</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

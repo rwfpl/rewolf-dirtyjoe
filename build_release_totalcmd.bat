@@ -1,0 +1,1 @@
+build.bat totalcmd win32

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Code editor</title>
+<meta http-equiv="content-type" content="text/html">
+</head>
+
+<body style="font-family: Arial; font-size: 12pt;">
+<Object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+	<param name="Keyword" value="code editor">
+	<param name="Keyword" value="code viewer">
+	<param name="Keyword" value="bytecode editor">
+	<param name="Keyword" value="exception records">
+	<param name="Keyword" value="exception editor">
+	<param name="Keyword" value="Code">
+	<param name="Keyword" value="opcodes help">
+	<param name="Keyword" value="opcodes description">
+</OBJECT>
+<hr>
+<div><div align=center>
+<table width=800 border=0 cellpadding=1 cellspacing=2 style="border-width: 0px;">
+<tr>
+<td style="text-align: justify;">
+    <p>With <b>Code editor</b> you can edit all aspects of <b><i>Code</i></b> attribute:</p>
+    <ul>
+        <li>Edit <b><i>Max Stack</i></b> and <b><i>Max Locals</i></b> fields</li>
+        <li><a href="attributes.html">Edit, view, add and delete attributes</a></li>
+        <li>Edit exception records</li>
+        <li>Edit bytecode</li>
+    </ul>
+    <p align="center"><img src="screens/code_view.png"></p>
+
+    <hr />
+    <h2>Editing bytecode</h2>
+    <p>There are three ways to edit bytecode:<br />
+    <ul>
+        <li>double-click on the disassembly (doesn&#39;t matter which column: address, bytecode or disassembly).</li>
+        <li>press <b>Ctrl+E</b> on the selected opcode</li>
+        <li>use <i><b>Edit opcode</b></i> from context menu</li>
+    </ul>
+    </p>
+    
+    <hr />
+    <h2>Editing exception records</h2>
+    <p align="center"><img src="screens/edit_exc_ctx.png"></p>
+    <p>You can access each exception record by selecting <i><b>Edit exception</b></i> option from the context menu of <i>Exceptions</i> listbox.</p>
+    <p align="center"><img src="screens/edit_exc.png"></p>
+    <p>From the same context menu you can also:</p>
+    <ul>
+        <li>Add new exception record</li>
+        <li>Delete exisitng exception record</li>
+        <li>Reorder exisitng records (Move Up/Down)</li>
+    </ul>
+    <p>New exception record can be also added directly from the disassembly context menu. To achieve it you need to select part of the disassembly 
+    and choose <i><b>Add exception handler for selected code</b></i> from the context menu.</p>
+    
+    <hr />
+    <h2>Copying disassembly to clipboard</h2>
+    <p>You can copy disassembly to clipboard by selecting <b><i>Copy all</i></b> or <b><i>Copy selection</i></b> options from disassembly listbox 
+    context menu. <i><b>Copy selection</b></i> feature is also accessible through <b>Ctrl+C</b> keyboard shortcut. You will be also asked to choose 
+    what content you want to copy:</p>
+    <p align="center"><img src="screens/code_editor_copying.png"></p>
+    
+    <hr />
+    <h2>Using Active Opcodes Help</h2>
+    <p>You can use <b>Opcodes Help</b> feature while you're working in <b>Code Editor</b>. Simply select <b>Opcode description</b> option from the 
+    disassembly listbox context menu (or press <b>Ctrl+H</b> keyboard shortcut). <b>Opcodes Help</b> window will be always showing description of 
+    the currently selected instruction.</p>
+    <p align="center"><img src="screens/opcodes_help2.png"></p>
+</td>
+</tr>
+</table>
+</div></div>
+<br />
+<hr />
+<small><center>(C) 2008-2014, ReWolf</center></small>
+</body>
+</html>

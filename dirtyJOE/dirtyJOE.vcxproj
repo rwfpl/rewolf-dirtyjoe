@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug x64|Win32">
+      <Configuration>Debug x64</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug x64|x64">
+      <Configuration>Debug x64</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release x64|Win32">
+      <Configuration>Release x64</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release x64|x64">
+      <Configuration>Release x64</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|x64">
+      <Configuration>Template</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A6AE9F9C-9D0B-4B2E-9752-E4557BE63B74}</ProjectGuid>
+    <RootNamespace>dirtyJOE</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release x64|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug x64|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release x64|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Template|x64'">
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release x64|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug x64|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)_$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Configuration)_$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug x64|x64'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)_$(Platform)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)_$(Platform)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug x64|x64'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug x64|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)_$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Configuration)_$(Platform)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release x64|x64'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)_$(Platform)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)_$(Platform)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release x64|x64'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release x64|x64'">false</LinkIncremental>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</PostBuildEventUseInBuild>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</PostBuildEventUseInBuild>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release x64|x64'">true</PostBuildEventUseInBuild>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug x64|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug x64|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug x64|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release x64|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release x64|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release x64|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|x64'" />
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">$(SolutionDir)\WTL\;$(VC_IncludePath);$(WindowsSdk_IncludePath);</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release x64|Win32'">$(SolutionDir)\WTL\;$(VC_IncludePath);$(WindowsSdk_IncludePath);</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">$(SolutionDir)\WTL\;$(VC_IncludePath);$(WindowsSdk_IncludePath);</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug x64|x64'">$(SolutionDir)\WTL\;$(VC_IncludePath);$(WindowsSdk_IncludePath);</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release x64|x64'">$(SolutionDir)\WTL\;$(VC_IncludePath);$(WindowsSdk_IncludePath);</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Template|x64'">$(SolutionDir)\WTL\;$(VC_IncludePath);$(WindowsSdk_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)\WTL\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSdk_IncludePath);$(SolutionDir)\WTL\</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSdk_IncludePath);$(SolutionDir)\WTL\</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSdk_IncludePath);$(SolutionDir)\WTL\</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>ComCtl32.lib UrlMon.lib WinInet.lib %(AdditionalOptions)</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ShowProgress>NotSet</ShowProgress>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ShowIncludes>false</ShowIncludes>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>ComCtl32.lib wininet.lib urlmon.lib %(AdditionalOptions)</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug x64|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <SmallerTypeCheck>false</SmallerTypeCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ShowIncludes>false</ShowIncludes>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>ComCtl32.lib wininet.lib urlmon.lib %(AdditionalOptions)</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>ComCtl32.lib UrlMon.lib WinInet.lib %(AdditionalOptions)</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>ComCtl32.lib wininet.lib urlmon.lib %(AdditionalOptions)</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release x64|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4100;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>ComCtl32.lib wininet.lib urlmon.lib %(AdditionalOptions)</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|x64'">
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions>ComCtl32.lib wininet.lib urlmon.lib %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalOptions>ComCtl32.lib UrlMon.lib WinInet.lib %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release x64|Win32'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="common\AppDir.cpp" />
+    <ClCompile Include="common\JVMSpec.cpp" />
+    <ClCompile Include="common\PyJOEWrapper.cpp" />
+    <ClCompile Include="java_support\append_frame.cpp" />
+    <ClCompile Include="java_support\bootstrap_methods.cpp" />
+    <ClCompile Include="java_support\full_frame.cpp" />
+    <ClCompile Include="java_support\jdisasm\JvmBasicBlock.cpp" />
+    <ClCompile Include="java_support\jdisasm\JvmFunction.cpp" />
+    <ClCompile Include="java_support\jdisasm\JvmOpAtype.cpp" />
+    <ClCompile Include="java_support\jdisasm\JvmOpByteLocal.cpp" />
+    <ClCompile Include="java_support\jdisasm\JvmOpcodeFactory.cpp" />
+    <ClCompile Include="java_support\jdisasm\JvmOpFlow.cpp" />
+    <ClCompile Include="java_support\jdisasm\JvmOpInt.cpp" />
+    <ClCompile Include="java_support\jdisasm\JvmOpLookupSwitch.cpp" />
+    <ClCompile Include="java_support\jdisasm\JvmOpOneByte.cpp" />
+    <ClCompile Include="java_support\jdisasm\JvmOpTableSwitch.cpp" />
+    <ClCompile Include="java_support\jdisasm\JvmOpWordCP.cpp" />
+    <ClCompile Include="java_support\RestoreDebugInfo.cpp" />
+    <ClCompile Include="java_support\same_locals_1_stack_item_frame_extended.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="third_party\aplib\depacks.c" />
+    <ClCompile Include="UI\attributesWnd.cpp" />
+    <ClCompile Include="UI\CDJSettings.cpp" />
+    <ClCompile Include="UI\dlgAbout.cpp" />
+    <ClCompile Include="UI\dlgAddAttribute.cpp" />
+    <ClCompile Include="UI\dlgAddCPItem.cpp" />
+    <ClCompile Include="UI\dlgCode.cpp" />
+    <ClCompile Include="UI\dlgCodeEditor.cpp" />
+    <ClCompile Include="UI\dlgEditAttrConstantValue.cpp" />
+    <ClCompile Include="UI\dlgEditAttrExceptions.cpp" />
+    <ClCompile Include="UI\dlgEditException.cpp" />
+    <ClCompile Include="UI\dlgEditFlags.cpp" />
+    <ClCompile Include="UI\dlgEditInnerClasses.cpp" />
+    <ClCompile Include="UI\dlgEditLocalVariableTable.cpp" />
+    <ClCompile Include="UI\dlgEditRef.cpp" />
+    <ClCompile Include="UI\dlgEditUtf8.cpp" />
+    <ClCompile Include="UI\dlgEditUx.cpp" />
+    <ClCompile Include="UI\dlgEditVal.cpp" />
+    <ClCompile Include="UI\dlgMain.cpp" />
+    <ClCompile Include="UI\dlgMiniHexEdit.cpp" />
+    <ClCompile Include="UI\dlgOpcodesHelp.cpp" />
+    <ClCompile Include="UI\dlgPythonMultiDecrypter.cpp" />
+    <ClCompile Include="UI\dlgPythonMultiPreview.cpp" />
+    <ClCompile Include="UI\dlgPythonStringDecrypt.cpp" />
+    <ClCompile Include="UI\dlgRestoreDebugInfo.cpp" />
+    <ClCompile Include="UI\dlgSelectColumn.cpp" />
+    <ClCompile Include="UI\dlgSettings.cpp" />
+    <ClCompile Include="UI\dlgSimpleEditDec.cpp" />
+    <ClCompile Include="UI\dlgSimpleLBView.cpp" />
+    <ClCompile Include="UI\dlgTabConstantPool.cpp" />
+    <ClCompile Include="UI\dlgTabFM.cpp" />
+    <ClCompile Include="UI\dlgTabOverview.cpp" />
+    <ClCompile Include="UI\dlgTabSubFM.cpp" />
+    <ClCompile Include="UI\shellext.cpp" />
+    <ClCompile Include="UI\StickyWindow.cpp" />
+    <ClCompile Include="UI\ui_helpers.cpp" />
+    <ClCompile Include="common\common.cpp" />
+    <ClCompile Include="java_support\attribute_info.cpp" />
+    <ClCompile Include="java_support\CAttrCode.cpp" />
+    <ClCompile Include="java_support\CAttrUnknown.cpp" />
+    <ClCompile Include="java_support\CClassFile.cpp" />
+    <ClCompile Include="java_support\CONSTANT_Utf8_info.cpp" />
+    <ClCompile Include="java_support\exception_entry.cpp" />
+    <ClCompile Include="java_support\field_info.cpp" />
+    <ClCompile Include="java_support\helpers.cpp" />
+    <ClCompile Include="java_support\hlp_references.cpp" />
+    <ClCompile Include="java_support\inner_class.cpp" />
+    <ClCompile Include="java_support\jdisasm\jdisasm.cpp" />
+    <ClCompile Include="java_support\line_number_tab.cpp" />
+    <ClCompile Include="java_support\local_vars.cpp" />
+    <ClCompile Include="java_support\same_locals_1_stack_item_frame.cpp" />
+    <ClCompile Include="java_support\stack_map_frame.cpp" />
+    <ClCompile Include="java_support\stack_map_frame_cldc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="gfx\dirtyjoe.ico" />
+    <None Include="gfx\donate5.bmp" />
+    <None Include="gfx\logo_dlg.bmp" />
+    <None Include="version_info.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="dirtyJOE.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\AppDir.h" />
+    <ClInclude Include="common\CListBoxLogger.h" />
+    <ClInclude Include="common\common_templates.h" />
+    <ClInclude Include="common\JVMSpec.h" />
+    <ClInclude Include="common\PyJOEWrapper.h" />
+    <ClInclude Include="java_support\append_frame.h" />
+    <ClInclude Include="java_support\bootstrap_methods.h" />
+    <ClInclude Include="java_support\full_frame.h" />
+    <ClInclude Include="java_support\jdisasm\jdisasm_enums.h" />
+    <ClInclude Include="java_support\jdisasm\JvmBasicBlock.h" />
+    <ClInclude Include="java_support\jdisasm\JvmFunction.h" />
+    <ClInclude Include="java_support\jdisasm\JvmOpAtype.h" />
+    <ClInclude Include="java_support\jdisasm\JvmOpByteLocal.h" />
+    <ClInclude Include="java_support\jdisasm\JvmOpcodeFactory.h" />
+    <ClInclude Include="java_support\jdisasm\JvmOpFlow.h" />
+    <ClInclude Include="java_support\jdisasm\JvmOpInt.h" />
+    <ClInclude Include="java_support\jdisasm\JvmOpLookupSwitch.h" />
+    <ClInclude Include="java_support\jdisasm\JvmOpOneByte.h" />
+    <ClInclude Include="java_support\jdisasm\JvmOpcode.h" />
+    <ClInclude Include="java_support\jdisasm\JvmOpTableSwitch.h" />
+    <ClInclude Include="java_support\jdisasm\JvmOpWordCP.h" />
+    <ClInclude Include="java_support\RestoreDebugInfo.h" />
+    <ClInclude Include="java_support\same_locals_1_stack_item_frame_extended.h" />
+    <ClInclude Include="PyJOE\pyjoe.h" />
+    <ClInclude Include="third_party\aplib\depacks.h" />
+    <ClInclude Include="UI\attributesWnd.h" />
+    <ClInclude Include="UI\CDirtyJOE.h" />
+    <ClInclude Include="UI\CDJSettings.h" />
+    <ClInclude Include="UI\dlgAbout.h" />
+    <ClInclude Include="UI\dlgAddAttribute.h" />
+    <ClInclude Include="UI\dlgAddCPItem.h" />
+    <ClInclude Include="UI\dlgCode.h" />
+    <ClInclude Include="UI\dlgCodeEditor.h" />
+    <ClInclude Include="UI\dlgEditAttrConstantValue.h" />
+    <ClInclude Include="UI\dlgEditAttrExceptions.h" />
+    <ClInclude Include="UI\dlgEditException.h" />
+    <ClInclude Include="UI\dlgEditFlags.h" />
+    <ClInclude Include="UI\dlgEditInnerClasses.h" />
+    <ClInclude Include="UI\dlgEditLocalVariableTable.h" />
+    <ClInclude Include="UI\dlgEditRef.h" />
+    <ClInclude Include="UI\dlgEditUtf8.h" />
+    <ClInclude Include="UI\dlgEditUx.h" />
+    <ClInclude Include="UI\dlgEditVal.h" />
+    <ClInclude Include="UI\dlgMain.h" />
+    <ClInclude Include="UI\dlgMiniHexEdit.h" />
+    <ClInclude Include="UI\dlgOpcodesHelp.h" />
+    <ClInclude Include="UI\dlgPythonMultiDecrypter.h" />
+    <ClInclude Include="UI\dlgPythonMultiPreview.h" />
+    <ClInclude Include="UI\dlgPythonStringDecrypt.h" />
+    <ClInclude Include="UI\dlgRestoreDebugInfo.h" />
+    <ClInclude Include="UI\dlgSelectColumn.h" />
+    <ClInclude Include="UI\dlgSettings.h" />
+    <ClInclude Include="UI\dlgSimpleEditDec.h" />
+    <ClInclude Include="UI\dlgSimpleLBView.h" />
+    <ClInclude Include="UI\dlgTabConstantPool.h" />
+    <ClInclude Include="UI\dlgTabFM.h" />
+    <ClInclude Include="UI\dlgTabOverview.h" />
+    <ClInclude Include="UI\dlgTabSubFM.h" />
+    <ClInclude Include="UI\pre_wtl.h" />
+    <ClInclude Include="UI\resource.h" />
+    <ClInclude Include="UI\shellext.h" />
+    <ClInclude Include="UI\StickyWindow.h" />
+    <ClInclude Include="UI\ui_helpers.h" />
+    <ClInclude Include="UI\version_info.h" />
+    <ClInclude Include="common\CDefClass.h" />
+    <ClInclude Include="common\CDynamicStruct.h" />
+    <ClInclude Include="common\CLogConsole.h" />
+    <ClInclude Include="common\CLogDummy.h" />
+    <ClInclude Include="common\CLogger.h" />
+    <ClInclude Include="common\common.h" />
+    <ClInclude Include="common\common_macros.h" />
+    <ClInclude Include="java_support\attribute_info.h" />
+    <ClInclude Include="java_support\CAttrCode.h" />
+    <ClInclude Include="java_support\CAttrTableTemplate.h" />
+    <ClInclude Include="java_support\CAttrUnknown.h" />
+    <ClInclude Include="java_support\CAttrUxTemplate.h" />
+    <ClInclude Include="java_support\CAttrUxUxTemplate.h" />
+    <ClInclude Include="java_support\CClassFile.h" />
+    <ClInclude Include="java_support\CDynamicStructWithCP.h" />
+    <ClInclude Include="java_support\CONSTANT_Utf8_info.h" />
+    <ClInclude Include="java_support\CONSTANT_uX_info.h" />
+    <ClInclude Include="java_support\CONSTANT_uXuX_info.h" />
+    <ClInclude Include="java_support\cp_info.h" />
+    <ClInclude Include="java_support\exception_entry.h" />
+    <ClInclude Include="java_support\field_info.h" />
+    <ClInclude Include="java_support\helpers.h" />
+    <ClInclude Include="java_support\helpers_templates.h" />
+    <ClInclude Include="java_support\hlp_references.h" />
+    <ClInclude Include="java_support\inner_class.h" />
+    <ClInclude Include="java_support\java_class_def.h" />
+    <ClInclude Include="java_support\java_types.h" />
+    <ClInclude Include="java_support\JavaConstPool_type.h" />
+    <ClInclude Include="java_support\jdisasm\jdisasm.h" />
+    <ClInclude Include="java_support\line_number_tab.h" />
+    <ClInclude Include="java_support\local_vars.h" />
+    <ClInclude Include="java_support\same_locals_1_stack_item_frame.h" />
+    <ClInclude Include="java_support\stack_map_frame.h" />
+    <ClInclude Include="java_support\stack_map_frame_cldc.h" />
+    <ClInclude Include="java_support\uX_dynStruct.h" />
+    <ClInclude Include="java_support\uXuX_dynStruct.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="dirtyJOE.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

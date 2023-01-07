@@ -1,0 +1,15 @@
+[OPTIONS]
+Auto Index=Yes
+Compatibility=1.1 or later
+Compiled file=dirtyjoe.chm
+Contents file=Table of Contents.hhc
+Default topic=html/about.html
+Display compile progress=Yes
+Full-text search=Yes
+Index file=Index.hhk
+Language=0x409 English (United States)
+Title=dirtyJOE - Java Overall Editor - Help
+
+
+[INFOTYPES]
+
